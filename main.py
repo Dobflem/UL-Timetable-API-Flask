@@ -8,11 +8,11 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def hello():
-    return 'Hello World'
+def home():
+    return 'Homepage of APIs created and maintained by Russell Hickey'
 
 
-@app.route('/<int:id>')
+@app.route('/timetable/v1/student/<int:id>')
 def get_timetable(id):
     return jsonify(**get_timetable_json(id))
 
