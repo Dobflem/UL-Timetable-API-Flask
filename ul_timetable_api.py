@@ -52,7 +52,7 @@ def get_schedule(days):
 
     return schedule
 
-def get_timetable_json(id):
+def get_student_timetable_json(id):
     try:
         html = get_timetable_html(id)
         soup = BeautifulSoup(html, "lxml")
